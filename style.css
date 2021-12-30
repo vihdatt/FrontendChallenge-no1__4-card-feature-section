@@ -1,0 +1,193 @@
+/*
+  Breakpoints:
+  320
+  480
+  768 tablet
+  1024 laptop
+  1280 retina
+  1366
+  1440
+  1660
+  1920
+*/
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  /*========== Colors ==========*/
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --text-color: hsl(229, 6%, 66%);
+  --title-color: hsl(234, 12%, 34%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  /*========== Font and typography ==========*/
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 8rem;
+  --bigger-font-size: 5.6rem;
+  --big-font-size: 4rem;
+  --h1-font-size: 2.4rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.8rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
+  --text-line-height: 3.2rem;
+
+  /*========== Font weight ==========*/
+  --font-thin: 300;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*========== BASE ==========*/
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--very-light-gray);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+.site-header {
+  text-align: center;
+  padding: 8rem 0 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.site-header .heading {
+  font-size: 3.2rem;
+  font-weight: var(--font-thin);
+}
+
+.site-header .heading span {
+  text-transform: uppercase;
+  display: block;
+  padding: 2rem 0 3.2rem;
+  font-weight: 600;
+}
+
+.site-header .sub-heading {
+  max-width: 560px;
+  line-height: 2.4rem;
+}
+
+/* site content */
+.site-content {
+  display: flex;
+  justify-content: center;
+}
+
+.col-3 {
+  padding: 0 1.5rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 3.2rem;
+  background-color: white;
+  box-shadow: rgba(5, 108, 108, 0.177) 3px 10px 15px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--cyan);
+}
+
+.col-2nd .card-1st::before {
+  background-color: var(--red);
+}
+
+.col-2nd .card-2nd::before {
+  background-color: var(--orange);
+}
+
+.col-3rd .card::before {
+  background-color: var(--blue);
+}
+
+.card .heading {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.card .text {
+  padding: 2rem 0 5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+}
+
+.card img {
+  float: right;
+}
+
+.card-2nd {
+  margin-top: 3rem;
+}
+
+.attribution {
+  margin: 3rem 0;
+}
+
+/*========== RESPONSIVE TYPOGRAPHY ==========*/
+@media screen and (max-width: 768px) {
+  .site-content {
+    flex-direction: column;
+  }
+
+  .col-3 {
+    width: 100%;
+    display: block;
+    margin: 1.5rem 0;
+  }
+
+  .site-content {
+    margin: 0 3rem;
+  }
+
+  .site-header {
+    margin: 0 3rem;
+  }
+
+  .site-header .heading {
+    font-size: 2.2rem;
+  }
+}
